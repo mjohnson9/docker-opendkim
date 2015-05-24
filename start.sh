@@ -16,6 +16,9 @@ Syslog                  yes
 SyslogSuccess           yes
 LogWhy                  yes
 
+# Sign mail with the ORIGINATING macro
+MTA                     ORIGINATING
+
 InternalHosts           127.0.0.0/8
 InternalHosts           [::1]/128
 # Allow other Docker containers to have their mail signed
