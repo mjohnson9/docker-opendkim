@@ -16,13 +16,18 @@ Syslog                  yes
 SyslogSuccess           yes
 LogWhy                  yes
 
+InternalHost            127.0.0.0/8
+InternalHost            [::1]/128
+# Allow other Docker containers to have their mail signed
+InternalHost            172.17.0.0/16
+
 Canonicalization        relaxed/simple
 
 Domain                  ${DOMAIN}
 Selector                ${SELECTOR}
 KeyFile                 /etc/dkim.key
 
-Mode                    sv
+Mode                    s
 SignatureAlgorithm      rsa-sha256
 
 # Always oversign From (sign using actual From and a null From to prevent
