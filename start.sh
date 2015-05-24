@@ -16,10 +16,10 @@ Syslog                  yes
 SyslogSuccess           yes
 LogWhy                  yes
 
-InternalHost            127.0.0.0/8
-InternalHost            [::1]/128
+InternalHosts           127.0.0.0/8
+InternalHosts           [::1]/128
 # Allow other Docker containers to have their mail signed
-InternalHost            172.17.0.0/16
+InternalHosts           172.17.0.0/16
 
 Canonicalization        relaxed/simple
 
