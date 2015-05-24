@@ -10,10 +10,6 @@ if [ -z "$SELECTOR" ]; then
     exit 1
 fi
 
-if [ -z "$MAILNAME" ]; then
-    MAILNAME="dkim_${SELECTOR}.${DOMAIN}"
-fi
-
 cat >> /etc/opendkim.conf <<EOF
 UMask                   002
 Syslog                  yes
